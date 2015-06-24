@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="imd-Wg-d5D">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hukidasi" translatesAutoresizingMaskIntoConstraints="NO" id="tUJ-EO-9S0">
+                                <rect key="frame" x="95" y="33" width="415" height="304"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Repeat Animation View Controller-->
+        <scene sceneID="Qbt-Fg-IFS">
+            <objects>
+                <viewController id="imd-Wg-d5D" customClass="RepeatAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61u-TM-tb2"/>
+                        <viewControllerLayoutGuide type="bottom" id="qyy-Yu-YmF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wI7-uM-JyQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeq-ZG-m1B">
+                                <rect key="frame" x="248" y="147" width="104" height="30"/>
+                                <color key="backgroundColor" red="0.2156862745" green="0.4941176471" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="7C0-I7-j1l"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yw8-Rk-U7C"/>
+                                </constraints>
+                                <state key="normal" title="TAP ME !">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAnimation:" destination="imd-Wg-d5D" eventType="touchUpInside" id="u0g-YP-iCw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カウント：０" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZw-p4-yfH">
+                                <rect key="frame" x="249" y="222" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jeq-ZG-m1B" secondAttribute="centerX" id="Db7-QG-oCE"/>
+                            <constraint firstItem="jeq-ZG-m1B" firstAttribute="top" secondItem="61u-TM-tb2" secondAttribute="bottom" constant="127" id="oZH-t1-33H"/>
+                            <constraint firstItem="TZw-p4-yfH" firstAttribute="top" secondItem="jeq-ZG-m1B" secondAttribute="bottom" constant="45" id="v9s-Oj-C39"/>
+                            <constraint firstAttribute="centerX" secondItem="TZw-p4-yfH" secondAttribute="centerX" id="zvE-c5-dlQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="TZw-p4-yfH" id="sr0-bp-3Xg"/>
+                        <outlet property="myButton" destination="jeq-ZG-m1B" id="MIU-Le-HWR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9x-IA-rXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hukidasi" width="98" height="135"/>
+    </resources>
+</document>

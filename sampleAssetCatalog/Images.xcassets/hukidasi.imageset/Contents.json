@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "hukidasi.pdf",
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "fill",
+          "width" : 5,
+          "height" : 2
+        },
+        "capInsets" : {
+          "bottom" : 34,
+          "top" : 99,
+          "right" : 25,
+          "left" : 68
+        }
+      }
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
